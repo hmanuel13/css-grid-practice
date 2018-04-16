@@ -22,27 +22,24 @@
     grid-gap: 2px;
   }
 
-  div :nth-child(odd){
-    background: lightblue;
-  }
-  div :nth-child(even){
-    background: lightgreen;
-  }
+
 
   .container2{
     display: grid;
     justify-content: center;
 
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 2px;
   }
 
    .container3{
     display: grid;
     justify-content: center;
+    grid-gap: 2px;
 
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2px;
+    grid-auto-rows: minmax(100px, auto);
+    
   }
 
 </style>
@@ -68,7 +65,7 @@
     </div>
   
   <br/>
-    <div class="container2">
+    <div class="container3">
         <div>1</div>
         <div>2</div>
         <div>3</div>
